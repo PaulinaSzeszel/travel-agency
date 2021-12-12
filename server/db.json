@@ -1,0 +1,113 @@
+{
+  "orders": [
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "kitchen"
+      ],
+      "adults": "2",
+      "children": "1",
+      "name": "Bob",
+      "contact": "111222333",
+      "start-date": "",
+      "totalCost": "$129,952",
+      "id": 1
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "kitchen"
+      ],
+      "adults": "2",
+      "children": "1",
+      "name": "Bob",
+      "contact": "111222333",
+      "start-date": "",
+      "totalCost": "$129,952",
+      "id": 2
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "kitchen"
+      ],
+      "adults": "2",
+      "children": "1",
+      "name": "Bob",
+      "contact": "111222333",
+      "start-date": "",
+      "totalCost": "$129,952",
+      "id": 3
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "kitchen"
+      ],
+      "adults": "2",
+      "children": "1",
+      "name": "444",
+      "contact": "555",
+      "start-date": "",
+      "totalCost": "$129,952",
+      "id": 4
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "ddd",
+      "contact": "ddd",
+      "start-date": "",
+      "totalCost": "$51,381",
+      "tripId": "5cc1d10130dfa407e2e54e20",
+      "id": 5
+    },
+    {
+      "car-rental": "",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "ddd",
+      "contact": "ddd",
+      "start-date": "",
+      "totalCost": "$51,381",
+      "id": 6
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "all-inclusive"
+      ],
+      "adults": 1,
+      "children": 0,
+      "name": "ddd",
+      "contact": "ddd",
+      "start-date": "",
+      "totalCost": "$51,681",
+      "id": 7
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [
+        "all-inclusive"
+      ],
+      "adults": 1,
+      "children": 0,
+      "name": "ddd",
+      "contact": "ddd",
+      "start-date": "",
+      "totalCost": "$51,681",
+      "id": 8
+    }
+  ]
+}
