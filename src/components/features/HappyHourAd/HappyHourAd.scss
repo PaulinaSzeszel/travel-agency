@@ -1,0 +1,20 @@
+@import '../../../styles/settings.scss';
+
+.component {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.title, .promoDescription {
+  position: absolute;
+  width: 100%;
+}
+
+.title {
+  bottom: 40px;
+}
+
+.promoDescription {
+  bottom: 15px;
+}
