@@ -1,6 +1,6 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import { connect } from 'react-redux';
+import { BrowserRouter, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import MainLayout from './components/layout/MainLayout/MainLayout';
@@ -10,7 +10,6 @@ import Trips from './components/views/Trips/TripsContainer';
 // TODO - import other views
 import Info from './components/views/Info/Info';
 import NotFound from './components/views/NotFound/NotFound';
-
 import Regions from './components/views/Regions/RegionsContainer';
 import Countries from './components/views/Countries/CountriesContainer';
 import Trip from './components/views/Trip/TripContainer';
@@ -19,7 +18,8 @@ import { AnimatedSwitch } from 'react-router-transition';
 import styles from './App.module.scss';
 
 import parseTrips from './utils/parseTrips';
-import {setMultipleStates} from './redux/globalRedux';
+import { setMultipleStates } from './redux/globalRedux';
+
 
 class App extends React.Component {
   static propTypes = {
@@ -27,14 +27,14 @@ class App extends React.Component {
     setStates: PropTypes.func,
   }
 
-  constructor(props){
+  constructor(props) {
     super(props);
     // parse trips when App is first created
     parseTrips(this.props.trips, this.props.setStates);
   }
 
-  componentDidUpdate(prevProps){
-    if(prevProps.trips !== this.props.trips){
+  componentDidUpdate(prevProps) {
+    if (prevProps.trips !== this.props.trips) {
       // parse trips again if they changed
       parseTrips(this.props.trips, this.props.setStates);
     }
@@ -75,3 +75,18 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
+
+/*atEnter={{ opacity: 0, top: 200}}
+atLeave={{ opacity: 0, top: 200}}
+atActive={{ opacity: 1, top: 0}}
+className={styles.switchWrapper}*/
+
+/*
+            atEnter={{ offset: -120/*, opacity: 0, top: 200  }}
+            atLeave={{ offset: -120/*, opacity: 0, top: 200 }}
+            atActive={{ offset: 0/*, opacity: 1, top: 200 }}
+            mapStyles={(styles) => ({
+              transform: `translateY(${styles.offset}%)`,
+            })}
+            className={styles.switchWrapper}
+*/
