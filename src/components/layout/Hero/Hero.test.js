@@ -1,19 +1,19 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import Hero from './Hero';
 
 describe('Component Hero', () => {
-  it('should render without crashing', () => {
-    const component = shallow(<Hero titleText='Lorem ipsum' imageSrc="Lorem IMGpsum"/>);
+  it('TEST 28: should render without crashing', () => {
+    const component = shallow(<Hero titleText='Lorem ipsum' imageSrc='image' />);
     expect(component).toBeTruthy();
     console.log(component.debug());
   });
 
-  it('should throw error without required props', () => {
+  it('TEST 29: should throw error without required props', () => {
     expect(() => shallow(<Hero />)).toThrow();
   });
 
-  it('should render correct title and image', () => {
+  it('TEST 30: should render correct title and image', () => {
     const expectedTitle = 'Lorem ipsum';
     const expectedImage = 'image.jpg';
     const component = shallow(<Hero titleText={expectedTitle} imageSrc={expectedImage} />);
@@ -23,11 +23,19 @@ describe('Component Hero', () => {
     expect(component.find('.image').prop('src')).toEqual(expectedImage);
   });
 
-  it('renders correct classNames', () => {
+  it('TEST 31: renders correct classNames', () => {
     const mockVariants = 'small dummy';
     const component = shallow(<Hero titleText='Lorem' imageSrc='image.jpg' variant={mockVariants} />);
     expect(component.hasClass('component')).toBe(true);
     expect(component.hasClass('small')).toBe(true);
     expect(component.hasClass('dummy')).toBe(true);
+  });
+
+  it('TEST 32: should render HappyHourAd', () => {
+    const expectedTitle = 'Lorem ipsum';
+    const expectedImage = 'image.jpg';
+    const component = shallow(<Hero titleText={expectedTitle} imageSrc={expectedImage} />);
+  
+    expect(component.find('HappyHourAd').length).toEqual(1);
   });
 });
