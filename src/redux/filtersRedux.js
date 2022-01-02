@@ -34,7 +34,7 @@ export default function reducer(statePart = [], action = {}) {
         ...statePart,
         searchPhrase: action.payload,
       };
-      case ADD_TAG:
+    case ADD_TAG:
       return {
         ...statePart,
         tags: [...statePart.tags, action.payload],

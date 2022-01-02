@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import DatePicker from "react-datepicker";
+import DatePicker from 'react-datepicker';
 
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css';
 
 class OrderOptionDate extends React.Component {
   static propTypes = {

@@ -1,42 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './HappyHourAd.scss';
+import styles from './HappyHourAd.module.scss';
 import { formatTime } from '../../../utils/formatTime.js';
 
 class HappyHourAd extends React.Component {
-  constructor() {
+
+  constructor(){
     super();
-    /* run this.forceUpdate() every second */
-    setInterval(() => {
-      this.forceUpdate();
-    }, 1000);
-  }
 
-  static propTypes = {
-    title: PropTypes.string,
-    promoDescription: PropTypes.string,
-  };
-
-  static defaultProps = {
-    title: 'Happy Hour',
-    promoDescription: 'time until:',
-  };
-
-  render() {
-    const { title, promoDescription } = this.props;
-    const countdownTime = this.getCountdownTime();
-
-    return (
-      <div className={styles.component}>
-        <h3 className={styles.title}>{title}</h3>
-        <div className={styles.promoDescription}>{promoDescription}</div>
-        <div className={styles.descr}>
-          {countdownTime > 23 * 60 * 60
-            ? this.props.promoDescription
-            : formatTime(countdownTime)}
-        </div>
-      </div>
-    );
+    setInterval(()=> this.forceUpdate(), 1000);
   }
 
   getCountdownTime() {
@@ -49,6 +21,25 @@ class HappyHourAd extends React.Component {
 
     return Math.round((nextNoon.getTime() - currentTime.getTime()) / 1000);
   }
+
+  render() {
+    let { title, promoDescription /* titleOff */} = this.props;
+    let countdownTime = this.getCountdownTime();
+    return (
+      <div className={styles.component}>
+        <h3 className={styles.title}>{title}</h3>
+        {/* <h3 className={styles.title}>{countdownTime > 23*60*60 ? title:(titleOff)}</h3> */}
+        <div className={styles.promoDescription}>{countdownTime > 23*60*60 ? promoDescription:(formatTime(countdownTime))}</div>
+      </div>
+    );
+  }
 }
+
+HappyHourAd.propTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  promoDescription: PropTypes.string,
+  // titleOff: PropTypes.string,
+};
 
 export default HappyHourAd;
