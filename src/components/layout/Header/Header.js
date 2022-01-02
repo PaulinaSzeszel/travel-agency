@@ -3,6 +3,7 @@ import {NavLink, Link} from 'react-router-dom';
 import styles from './Header.module.scss';
 import Icon from '../../common/Icon/Icon';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import Phone from '../Phone/Phone';
 
 class Header extends React.Component {
   render(){
@@ -30,6 +31,7 @@ class Header extends React.Component {
               <div className={styles.contact}>
                 <Icon name='phone' /><span>678.243.8455</span>
               </div>
+              <Phone />
             </Col>
           </Row>
         </Grid>
